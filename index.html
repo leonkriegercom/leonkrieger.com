@@ -301,6 +301,58 @@
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
+<link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css">
+<script>
+var klaroConfig = {
+  version: 1,
+  elementID: "klaro",
+  styling: { theme: ["light", "bottom", "wide"] },
+  cookieName: "klaro",
+  cookieExpiresAfterDays: 365,
+  default: false,
+  mustConsent: false,
+  acceptAll: true,
+  lang: "de",
+  translations: {
+    de: {
+      consentNotice: {
+        description: "Ich nutze Cookies um zu verstehen, wie diese Website genutzt wird. Du entscheidest, was geladen wird."
+      },
+      acceptAll: "Alle akzeptieren",
+      declineAll: "Ablehnen",
+      close: "Schließen",
+      save: "Speichern",
+      consentModal: {
+        title: "Datenschutzeinstellungen",
+        description: "Hier kannst du einstellen, welche Dienste geladen werden dürfen."
+      },
+      purposes: { analytics: "Analyse" }
+    }
+  },
+  services: [
+    {
+      name: "googleTagManager",
+      title: "Google Tag Manager",
+      purposes: ["analytics"],
+      required: false,
+      onAccept: function() {
+        (function(w,d,s,l,i){
+          w[l]=w[l]||[];
+          w[l].push({"gtm.start": new Date().getTime(), event:"gtm.js"});
+          var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),
+              dl=l!="dataLayer"?"&l="+l:"";
+          j.async=true;
+          j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;
+          f.parentNode.insertBefore(j,f);
+        })(window,document,"script","dataLayer","GTM-WZT8MMH3");
+      },
+      onDecline: function() {}
+    }
+  ]
+};
+</script>
+<script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.js" data-config="klaroConfig"></script>
 </head>
 <body>
 
@@ -532,7 +584,7 @@
     <div class="fade-in">
       <p class="section-tag">Kontakt</p>
       <h2 class="section-heading">Lass uns sprechen.</h2>
-      <p class="section-sub">Du hast ein Projekt, eine Frage oder willst einfach herausfinden, was wir gemeinsam verbessern können? Schreib mir – ich melde mich innerhalb von 24 Stunden.</p>
+      <p class="section-sub">Du hast ein Projekt, eine Frage oder willst einfach herausfinden, ob wir zusammenpassen? Schreib mir – ich melde mich innerhalb von 24 Stunden.</p>
     </div>
     <div class="contact-grid fade-in">
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/xykvwygo" method="POST">
