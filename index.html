@@ -444,6 +444,16 @@
   // DataLayer initialisieren
   window.dataLayer = window.dataLayer || [];
 
+  // Google Consent Mode v2 – Default: alles denied
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
   // GTM immer laden
   (function(w,d,s,l,i){
     w[l]=w[l]||[];
@@ -465,6 +475,14 @@
     document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
   }
   function pushConsent(ga4, gtm) {
+    // Google Consent Mode v2 signals
+    gtag('consent', 'update', {
+      analytics_storage: ga4 ? 'granted' : 'denied',
+      ad_storage: gtm ? 'granted' : 'denied',
+      ad_user_data: gtm ? 'granted' : 'denied',
+      ad_personalization: gtm ? 'granted' : 'denied'
+    });
+    // DataLayer variablen für GTM Trigger
     window.dataLayer.push({
       event: 'consentUpdate',
       consentAnalytics: ga4,
