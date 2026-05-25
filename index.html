@@ -810,8 +810,8 @@
 <footer>
   <p>© 2026 Leon Krieger · <a href="https://leonkrieger.com">leonkrieger.com</a></p>
   <div style="display:flex;gap:1.5rem;">
-    <a href="#">Impressum</a>
-    <a href="#">Datenschutz</a>
+    <a href="#" onclick="openModal('impressum'); return false;">Impressum</a>
+    <a href="#" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
   </div>
 </footer>
 
@@ -835,5 +835,109 @@
     } catch { btn.textContent = 'Fehler – bitte per E-Mail melden'; btn.disabled = false; }
   });
 </script>
+
+<style>
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9998;
+    background: rgba(15,15,15,0.6); backdrop-filter: blur(4px);
+    align-items: center; justify-content: center; padding: 1.5rem;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: #fff; border-radius: 20px;
+    padding: 2.5rem; max-width: 600px; width: 100%;
+    max-height: 85vh; overflow-y: auto;
+    box-shadow: 0 24px 80px rgba(15,15,15,0.2);
+  }
+  .modal-box h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.6rem; letter-spacing: -0.02em;
+    color: #0f0f0f; margin-bottom: 1.5rem;
+  }
+  .modal-box h3 {
+    font-size: 0.95rem; font-weight: 500;
+    color: #0f0f0f; margin: 1.5rem 0 0.4rem;
+  }
+  .modal-box p, .modal-box li {
+    font-size: 0.9rem; color: #5a5a5a;
+    line-height: 1.7; margin-bottom: 0.5rem;
+  }
+  .modal-box ul { padding-left: 1.25rem; }
+  .modal-close {
+    display: block; margin-top: 2rem; width: 100%;
+    padding: 0.8rem; background: #0f0f0f; color: #fff;
+    border: none; border-radius: 2rem; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 500; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .modal-close:hover { background: #1a4fff; }
+</style>
+
+<!-- IMPRESSUM MODAL -->
+<div class="modal-overlay" id="modal-impressum" onclick="closeModalOutside(event, 'impressum')">
+  <div class="modal-box">
+    <h2>Impressum</h2>
+    <h3>Angaben gemäß § 5 TMG</h3>
+    <p>Leon Krieger<br>In der Eichenbach 3<br>55435 Gau-Algesheim</p>
+    <h3>Kontakt</h3>
+    <p>E-Mail: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
+    <h3>Hinweis</h3>
+    <p>Leon Krieger ist Kleinunternehmer im Sinne von § 19 UStG. Es wird daher keine Umsatzsteuer berechnet und ausgewiesen.</p>
+    <h3>Haftung für Inhalte</h3>
+    <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf dieser Website nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen, besteht nicht.</p>
+    <h3>Haftung für Links</h3>
+    <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+    <button class="modal-close" onclick="closeModal('impressum')">Schließen</button>
+  </div>
+</div>
+
+<!-- DATENSCHUTZ MODAL -->
+<div class="modal-overlay" id="modal-datenschutz" onclick="closeModalOutside(event, 'datenschutz')">
+  <div class="modal-box">
+    <h2>Datenschutzerklärung</h2>
+    <h3>Verantwortlicher</h3>
+    <p>Leon Krieger<br>In der Eichenbach 3<br>55435 Gau-Algesheim<br>E-Mail: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
+
+    <h3>Erhebung und Verarbeitung personenbezogener Daten</h3>
+    <p>Diese Website erhebt nur dann personenbezogene Daten, wenn du aktiv Informationen übermittelst (z. B. über das Kontaktformular) oder der Nutzung von Analyse-Diensten zustimmst.</p>
+
+    <h3>Kontaktformular</h3>
+    <p>Wenn du das Kontaktformular nutzt, werden die eingegebenen Daten (Name, E-Mail, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet und per Formspree (Formspree, Inc., USA) übermittelt. Die Daten werden nicht für andere Zwecke genutzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h3>Google Tag Manager</h3>
+    <p>Diese Website nutzt den Google Tag Manager (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Der Tag Manager selbst setzt keine Cookies und verarbeitet keine personenbezogenen Daten. Er dient ausschließlich der Verwaltung von Analyse-Skripten und wird nur bei deiner Einwilligung aktiviert.</p>
+
+    <h3>Google Analytics (GA4)</h3>
+    <p>Mit deiner Einwilligung wird Google Analytics 4 (Google Ireland Limited) eingesetzt, um die Nutzung dieser Website statistisch auszuwerten. Dabei werden Daten wie Seitenaufrufe, Verweildauer und ungefähre Herkunft anonymisiert erfasst. Die Daten werden auf Servern von Google verarbeitet, ggf. auch in den USA. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Du kannst deine Einwilligung jederzeit widerrufen.</p>
+
+    <h3>Cookies</h3>
+    <p>Diese Website verwendet ein Cookie zur Speicherung deiner Datenschutzentscheidung (Name: <code>consent_analytics</code>). Dieses Cookie ist technisch notwendig, um deine Einwilligung zu merken, und läuft nach 365 Tagen ab.</p>
+
+    <h3>Deine Rechte</h3>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten sowie das Recht auf Datenübertragbarkeit. Wende dich dafür jederzeit an: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
+
+    <h3>Beschwerderecht</h3>
+    <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für Datenschutz und Informationsfreiheit Rheinland-Pfalz.</p>
+
+    <button class="modal-close" onclick="closeModal('datenschutz')">Schließen</button>
+  </div>
+</div>
+
+<script>
+  function openModal(name) {
+    document.getElementById('modal-' + name).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(name) {
+    document.getElementById('modal-' + name).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(event, name) {
+    if (event.target === document.getElementById('modal-' + name)) {
+      closeModal(name);
+    }
+  }
+</script>
+
 </body>
 </html>
