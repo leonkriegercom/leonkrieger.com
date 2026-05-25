@@ -111,8 +111,8 @@
     border-radius: 16px; padding: 1.5rem 1.75rem;
   }
   .stat-card .num {
-    font-family: var(--serif); font-size: 2.5rem;
-    color: var(--ink); letter-spacing: -0.03em;
+    font-family: var(--serif); font-size: 2rem;
+    color: var(--ink); letter-spacing: -0.02em; line-height: 1.15;
   }
   .stat-card .label { font-size: 0.875rem; color: var(--ink-soft); margin-top: 0.25rem; }
   .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -162,7 +162,7 @@
   /* LEISTUNGEN */
   #leistungen { background: #fff; }
   .services-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
     margin-top: 4rem; border: 1px solid var(--border);
     border-radius: 16px; overflow: hidden;
   }
@@ -287,11 +287,10 @@
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 3rem; }
-    .hero-visual { order: -1; }
-    .stat-row { grid-template-columns: 1fr 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .service-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 0; }
+    .hero-visual { display: none; }
+    .services-grid { grid-template-columns: 1fr; border-radius: 12px; }
+    .service-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 1.5rem; }
     .service-item:last-child { border-bottom: none; }
     section { padding: 4rem 1.5rem; }
     #ueber-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -299,60 +298,220 @@
     .form-row { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .about-numbers { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 540px) {
+    body { overflow-x: hidden; }
+    .hero { padding: 6rem 1.25rem 3rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-sub { font-size: 1rem; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    section { padding: 3rem 1.25rem; }
+    .section-heading { font-size: 1.75rem; }
+    .why-grid { grid-template-columns: 1fr; }
+    .about-numbers { grid-template-columns: 1fr 1fr; }
+    nav { padding: 1rem 1.25rem; }
+    .nav-cta { display: none; }
+    .projects-grid { grid-template-columns: 1fr; }
+    footer { padding: 1.25rem; }
   }
 </style>
-<link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css">
+
+<style>
+  /* CONSENT OVERLAY */
+  #consent-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(15,15,15,0.55);
+    backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.5rem;
+    opacity: 0; animation: fadeOverlay 0.3s ease 0.1s forwards;
+  }
+  @keyframes fadeOverlay { to { opacity: 1; } }
+  #consent-box {
+    background: #fff; border-radius: 20px;
+    padding: 2.5rem; max-width: 480px; width: 100%;
+    box-shadow: 0 24px 80px rgba(15,15,15,0.18);
+    transform: translateY(16px); animation: slideBox 0.3s ease 0.1s forwards;
+  }
+  @keyframes slideBox { to { transform: translateY(0); } }
+  #consent-box .c-label {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #1a4fff; margin-bottom: 0.75rem;
+  }
+  #consent-box h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.02em;
+    color: #0f0f0f; margin-bottom: 0.75rem;
+  }
+  #consent-box p {
+    font-size: 0.9rem; color: #5a5a5a; line-height: 1.65; margin-bottom: 1.5rem;
+  }
+  .c-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .c-btn {
+    padding: 0.8rem 1rem; border-radius: 2rem; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 500; cursor: pointer;
+    border: 1.5px solid #0f0f0f; transition: background 0.2s, color 0.2s;
+    text-align: center;
+  }
+  .c-btn-decline { background: #fff; color: #0f0f0f; }
+  .c-btn-decline:hover { background: #f0f0f0; }
+  .c-btn-accept { background: #0f0f0f; color: #fff; }
+  .c-btn-accept:hover { background: #1a4fff; border-color: #1a4fff; }
+  .c-customize {
+    background: none; border: none; font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem; color: #999; cursor: pointer; text-decoration: underline;
+    display: block; margin: 0 auto; padding: 0.25rem;
+    transition: color 0.2s;
+  }
+  .c-customize:hover { color: #0f0f0f; }
+
+  /* DETAIL PANEL */
+  #consent-detail { display: none; margin-top: 1.25rem; border-top: 1px solid #eee; padding-top: 1.25rem; }
+  #consent-detail.open { display: block; }
+  .c-service {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .c-service:last-child { border-bottom: none; }
+  .c-service-info h4 { font-size: 0.9rem; font-weight: 500; color: #0f0f0f; margin-bottom: 0.2rem; }
+  .c-service-info p { font-size: 0.8rem; color: #5a5a5a; line-height: 1.5; margin: 0; }
+  .c-toggle { position: relative; flex-shrink: 0; }
+  .c-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
+  .c-toggle-track {
+    display: block; width: 40px; height: 22px; border-radius: 11px;
+    background: #ddd; cursor: pointer; transition: background 0.2s;
+    position: relative;
+  }
+  .c-toggle input:checked + .c-toggle-track { background: #1a4fff; }
+  .c-toggle-track::after {
+    content: ''; position: absolute; top: 3px; left: 3px;
+    width: 16px; height: 16px; border-radius: 50%; background: #fff;
+    transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .c-toggle input:checked + .c-toggle-track::after { transform: translateX(18px); }
+  .c-save {
+    width: 100%; margin-top: 1rem; padding: 0.8rem;
+    background: #0f0f0f; color: #fff; border: none; border-radius: 2rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: background 0.2s;
+  }
+  .c-save:hover { background: #1a4fff; }
+</style>
+
+<div id="consent-overlay">
+  <div id="consent-box">
+    <p class="c-label">Datenschutz</p>
+    <h2>Darf ich Cookies setzen?</h2>
+    <p>Ich nutze Analyse-Tools um zu verstehen, wie diese Website genutzt wird – damit ich sie verbessern kann. Du entscheidest, was geladen wird.</p>
+    <div class="c-buttons">
+      <button class="c-btn c-btn-decline" onclick="consentDecline()">Ablehnen</button>
+      <button class="c-btn c-btn-accept" onclick="consentAccept()">Akzeptieren</button>
+    </div>
+    <button class="c-customize" onclick="toggleDetail()">Anpassen</button>
+
+    <div id="consent-detail">
+      <div class="c-service">
+        <div class="c-service-info">
+          <h4>Google Analytics (GA4)</h4>
+          <p>Anonyme Besucherstatistiken: Seitenaufrufe, Verweildauer, Herkunft. Keine personenbezogenen Daten.</p>
+        </div>
+        <label class="c-toggle">
+          <input type="checkbox" id="toggle-ga4" checked>
+          <span class="c-toggle-track"></span>
+        </label>
+      </div>
+      <div class="c-service">
+        <div class="c-service-info">
+          <h4>Google Tag Manager</h4>
+          <p>Verwaltet das Laden von Analyse-Skripten. Selbst kein Tracking, nur Steuerung.</p>
+        </div>
+        <label class="c-toggle">
+          <input type="checkbox" id="toggle-gtm" checked>
+          <span class="c-toggle-track"></span>
+        </label>
+      </div>
+      <button class="c-save" onclick="consentSave()">Auswahl speichern</button>
+    </div>
+  </div>
+</div>
+
 <script>
-var klaroConfig = {
-  version: 1,
-  elementID: "klaro",
-  styling: { theme: ["light", "bottom", "wide"] },
-  cookieName: "klaro",
-  cookieExpiresAfterDays: 365,
-  default: false,
-  mustConsent: false,
-  acceptAll: true,
-  lang: "de",
-  translations: {
-    de: {
-      consentNotice: {
-        description: "Ich nutze Cookies um zu verstehen, wie diese Website genutzt wird. Du entscheidest, was geladen wird."
-      },
-      acceptAll: "Alle akzeptieren",
-      declineAll: "Ablehnen",
-      close: "Schließen",
-      save: "Speichern",
-      consentModal: {
-        title: "Datenschutzeinstellungen",
-        description: "Hier kannst du einstellen, welche Dienste geladen werden dürfen."
-      },
-      purposes: { analytics: "Analyse" }
+  // DataLayer initialisieren
+  window.dataLayer = window.dataLayer || [];
+
+  // GTM immer laden
+  (function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),
+        dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZT8MMH3');
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+  function setCookie(name, value, days) {
+    var d = new Date(); d.setTime(d.getTime() + days*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+  function pushConsent(ga4, gtm) {
+    window.dataLayer.push({
+      event: 'consentUpdate',
+      consentAnalytics: ga4,
+      consentGTM: gtm
+    });
+  }
+  function hideOverlay() {
+    var o = document.getElementById('consent-overlay');
+    o.style.opacity = '0'; o.style.transition = 'opacity 0.2s';
+    setTimeout(function(){ o.remove(); }, 200);
+  }
+  function consentAccept() {
+    setCookie('consent_analytics', 'true', 365);
+    setCookie('consent_gtm', 'true', 365);
+    pushConsent(true, true);
+    hideOverlay();
+  }
+  function consentDecline() {
+    setCookie('consent_analytics', 'false', 365);
+    setCookie('consent_gtm', 'false', 365);
+    pushConsent(false, false);
+    hideOverlay();
+  }
+  function consentSave() {
+    var gtm = document.getElementById('toggle-gtm').checked;
+    var ga4 = document.getElementById('toggle-ga4').checked;
+    setCookie('consent_analytics', ga4 ? 'true' : 'false', 365);
+    setCookie('consent_gtm', gtm ? 'true' : 'false', 365);
+    pushConsent(ga4, gtm);
+    hideOverlay();
+  }
+  function toggleDetail() {
+    var d = document.getElementById('consent-detail');
+    d.classList.toggle('open');
+  }
+
+  // Beim Seitenload: gespeicherte Entscheidung in DataLayer pushen
+  window.addEventListener('DOMContentLoaded', function() {
+    var analyticsConsent = getCookie('consent_analytics');
+    var gtmConsent = getCookie('consent_gtm');
+    if (analyticsConsent !== null) {
+      // Bereits entschieden – Banner ausblenden
+      var o = document.getElementById('consent-overlay');
+      if (o) o.remove();
+      // Gespeicherte Werte in DataLayer pushen
+      pushConsent(analyticsConsent === 'true', gtmConsent === 'true');
     }
-  },
-  services: [
-    {
-      name: "googleTagManager",
-      title: "Google Tag Manager",
-      purposes: ["analytics"],
-      required: false,
-      onAccept: function() {
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];
-          w[l].push({"gtm.start": new Date().getTime(), event:"gtm.js"});
-          var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),
-              dl=l!="dataLayer"?"&l="+l:"";
-          j.async=true;
-          j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;
-          f.parentNode.insertBefore(j,f);
-        })(window,document,"script","dataLayer","GTM-WZT8MMH3");
-      },
-      onDecline: function() {}
-    }
-  ]
-};
+  });
 </script>
-<script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.js" data-config="klaroConfig"></script>
 </head>
 <body>
 
@@ -389,16 +548,16 @@ var klaroConfig = {
     <div class="stat-row">
       <div class="stat-card">
         <div class="num">GA4</div>
-        <div class="label">Migration &amp; Setup</div>
+        <div class="label">Ich weiß, was auf deiner Website passiert</div>
       </div>
       <div class="stat-card">
         <div class="num">GTM</div>
-        <div class="label">Tag Management</div>
+        <div class="label">Sauberes Tracking, von Anfang an</div>
       </div>
     </div>
     <div class="stat-card">
-      <div class="num">Looker Studio</div>
-      <div class="label">Dashboards, die jeder versteht</div>
+      <div class="num">Data Studio &amp; BigQuery</div>
+      <div class="label">Dashboards, die Entscheidungen erleichtern</div>
     </div>
   </div>
 </div>
@@ -440,7 +599,16 @@ var klaroConfig = {
           </svg>
         </div>
         <h3>BI &amp; Dashboards</h3>
-        <p>Looker Studio, BigQuery und individuelle Dashboards, die Ihre wichtigsten KPIs auf einen Blick zeigen – für dein Team und deine Führungsebene.</p>
+        <p>Data Studio, BigQuery und individuelle Dashboards, die Ihre wichtigsten KPIs auf einen Blick zeigen – für dein Team und deine Führungsebene.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+        </div>
+        <h3>Conversion Tracking</h3>
+        <p>Ich richte Conversion Tracking für alle relevanten Plattformen ein – Google Ads, Meta, LinkedIn und mehr. Du siehst genau, welche Kanäle wirklich Ergebnisse liefern, und kannst dein Budget gezielt dort einsetzen, wo es sich lohnt.</p>
       </div>
     </div>
   </div>
@@ -514,7 +682,7 @@ var klaroConfig = {
       <div class="cert-list">
         <span class="cert-badge"><span></span>Google Analytics 4</span>
         <span class="cert-badge"><span></span>Google Tag Manager</span>
-        <span class="cert-badge"><span></span>Looker Studio (Data Studio)</span>
+        <span class="cert-badge"><span></span>Data Studio (Data Studio)</span>
         <span class="cert-badge"><span></span>BigQuery</span>
       </div>
     </div>
@@ -565,7 +733,7 @@ var klaroConfig = {
       <div class="project-card">
         <p class="project-tag">Agentur · Reporting</p>
         <h3>Automatisiertes Reporting-Dashboard</h3>
-        <p>Aufbau eines zentralen Looker Studio Dashboards, das Daten aus GA4, Google Ads und CRM zusammenführt – für wöchentliche Management-Reports auf Knopfdruck.</p>
+        <p>Aufbau eines zentralen Data Studio Dashboards, das Daten aus GA4, Google Ads und CRM zusammenführt – für wöchentliche Management-Reports auf Knopfdruck.</p>
         <span class="project-result">3 h/Woche Reportingaufwand eingespart</span>
       </div>
       <div class="project-card">
