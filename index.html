@@ -192,6 +192,30 @@
   .section-sub { font-size: 1.05rem; color: var(--ink-soft); max-width: 52ch; line-height: 1.7; }
   .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
+  /* TESTIMONIALS */
+  #testimonials { background: #fff; }
+  .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3.5rem; max-width: 780px; }
+  .testimonial-card {
+    border: 1px solid var(--border); border-radius: 16px;
+    padding: 2rem 2.25rem; position: relative;
+  }
+  .testimonial-quote {
+    font-family: var(--serif); font-size: 4rem; line-height: 1;
+    color: var(--accent-light); position: absolute; top: 1rem; right: 1.75rem;
+  }
+  .testimonial-text {
+    font-size: 1rem; color: var(--ink); line-height: 1.8;
+    margin-bottom: 1.75rem; font-style: italic; max-width: 62ch;
+  }
+  .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+  .testimonial-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    overflow: hidden; flex-shrink: 0; border: 2px solid var(--border);
+  }
+  .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .testimonial-name { font-size: 0.95rem; font-weight: 500; color: var(--ink); }
+  .testimonial-role { font-size: 0.82rem; color: var(--ink-faint); margin-top: 0.15rem; }
+
   /* WARUM ICH */
   .why-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem;
@@ -739,6 +763,35 @@
         </div>
         <h3>Klare Kommunikation</h3>
         <p>Kein Tech-Jargon. Du verstehst immer, was ich tue und warum – und was die Daten für dein Business bedeuten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="fade-in">
+      <p class="section-tag">Kundenstimmen</p>
+      <h2 class="section-heading">Was Kunden sagen.</h2>
+    </div>
+    <div class="testimonial-grid fade-in">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Als junges Start-up standen wir vor der Herausforderung, unser Tracking sauber aufzusetzen. Mit Leon haben wir einen Partner gefunden, der sich bei Google, Meta und LinkedIn bestens auskennt und in kürzester Zeit ein passendes Setup erstellt hat. Die Zusammenarbeit lief total unkompliziert – er nimmt alle inhaltlich mit und erklärt, was er tut. Unsere Bedarfe waren meist situativ, aber wir sind froh, diesen wichtigen Bereich in vertrauensvoller Expertise zu wissen.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <img src="1000351347small.jpg" alt="Mario Müller" width="52" height="52">
+          </div>
+          <div>
+            <div class="testimonial-name">Mario Müller</div>
+            <div class="testimonial-role">Geschäftsführer · Social Matching Plattformen GmbH</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
