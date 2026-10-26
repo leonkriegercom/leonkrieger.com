@@ -3,621 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leon Krieger – Web Analytics & Data Consultant</title>
-<meta name="description" content="Leon Krieger – freiberuflicher Web Analytics Berater aus dem Rhein-Main-Gebiet. GA4, Google Tag Manager, Conversion Tracking und Data Studio Dashboards. Sauberes Tracking, DSGVO-konform.">
+<title>GA4 &amp; Google Tag Manager Freelancer Rhein-Main | Leon Krieger</title>
+<meta name="description" content="Freiberuflicher Web Analytics Berater aus dem Rhein-Main-Gebiet: GA4, Google Tag Manager, Server-Side Tracking und Looker Studio Dashboards. DSGVO-konform, für Frankfurt, Mainz, Wiesbaden und remote.">
+<link rel="canonical" href="https://leonkrieger.com/">
+<meta name="theme-color" content="#faf9f6">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230f0f0f'/><text x='16' y='22' font-family='Georgia,serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'>LK</text></svg>">
-
-<link rel="canonical" href="https://leonkrieger.com">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://leonkrieger.com">
-<meta property="og:title" content="Leon Krieger – Web Analytics & Tracking Berater">
-<meta property="og:description" content="GA4, Google Tag Manager, Conversion Tracking und Data Studio Dashboards. Sauberes Tracking aus dem Rhein-Main-Gebiet – DSGVO-konform.">
+<meta property="og:url" content="https://leonkrieger.com/">
+<meta property="og:site_name" content="Leon Krieger">
+<meta property="og:title" content="Leon Krieger – GA4 & Google Tag Manager Freelancer">
+<meta property="og:description" content="Sauberes, DSGVO-konformes Tracking mit GA4, Google Tag Manager und Server-Side GTM – plus Looker Studio Dashboards, die Entscheidungen erleichtern.">
+<meta property="og:image" content="https://leonkrieger.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Leon Krieger – Web Analytics & Tracking aus dem Rhein-Main-Gebiet">
 <meta property="og:locale" content="de_DE">
 
 <!-- Twitter/X Card -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leon Krieger – Web Analytics & Tracking Berater">
-<meta name="twitter:description" content="GA4, Google Tag Manager, Conversion Tracking und Data Studio Dashboards. Sauberes Tracking aus dem Rhein-Main-Gebiet.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leon Krieger – GA4 & Google Tag Manager Freelancer">
+<meta name="twitter:description" content="Sauberes, DSGVO-konformes Tracking mit GA4, GTM und Server-Side GTM – plus Looker Studio Dashboards.">
+<meta name="twitter:image" content="https://leonkrieger.com/og-image.png">
 
-<!-- Schema.org JSON-LD -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Leon Krieger",
-  "url": "https://leonkrieger.com",
-  "email": "leon@leonkrieger.com",
-  "jobTitle": "Web Analytics & Tracking Berater",
-  "description": "Freiberuflicher Berater für Web Analytics, Google Tag Manager, Conversion Tracking und Data Studio Dashboards im Rhein-Main-Gebiet.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "In der Eichenbach 3",
-    "addressLocality": "Gau-Algesheim",
-    "postalCode": "55435",
-    "addressCountry": "DE"
-  },
-  "areaServed": {
-    "@type": "Place",
-    "name": "Rhein-Main-Gebiet, Deutschland"
-  },
-  "knowsAbout": [
-    "Google Analytics 4",
-    "Google Tag Manager",
-    "Conversion Tracking",
-    "Data Studio",
-    "BigQuery",
-    "Web Analytics",
-    "DSGVO-konformes Tracking"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/in/leon-krieger/"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://leonkrieger.com/#person",
+      "name": "Leon Krieger",
+      "url": "https://leonkrieger.com/",
+      "image": "https://leonkrieger.com/morefire-leon_krieger.jpg",
+      "email": "mailto:leon@leonkrieger.com",
+      "jobTitle": "Web Analytics & Tracking Berater",
+      "knowsAbout": ["Google Analytics 4", "Google Tag Manager", "Server-Side Tagging", "Consent Mode", "Conversion Tracking", "Looker Studio", "BigQuery", "DSGVO-konformes Tracking"],
+      "sameAs": ["https://www.linkedin.com/in/leon-krieger/"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://leonkrieger.com/#service",
+      "name": "Leon Krieger – Web Analytics & Tracking",
+      "url": "https://leonkrieger.com/",
+      "image": "https://leonkrieger.com/og-image.png",
+      "email": "leon@leonkrieger.com",
+      "founder": { "@id": "https://leonkrieger.com/#person" },
+      "description": "Freiberufliche Beratung für GA4, Google Tag Manager, Server-Side Tracking, Conversion Tracking und Looker Studio Dashboards.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "In der Eichenbach 3",
+        "addressLocality": "Gau-Algesheim",
+        "postalCode": "55435",
+        "addressRegion": "Rheinland-Pfalz",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Frankfurt am Main" },
+        { "@type": "City", "name": "Mainz" },
+        { "@type": "City", "name": "Wiesbaden" },
+        { "@type": "City", "name": "Darmstadt" },
+        { "@type": "Country", "name": "Deutschland" }
+      ],
+      "knowsLanguage": ["de", "en"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Leistungen",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GA4-Implementierung und -Migration" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Tag Manager Setup und Audit" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Server-Side Tagging (sGTM)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion Tracking" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Looker Studio Dashboards und BigQuery" } }
+        ]
+      }
+    }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --ink: #0f0f0f;
-    --ink-soft: #5a5a5a;
-    --ink-faint: #999;
-    --paper: #faf9f6;
-    --accent: #1a4fff;
-    --accent-light: #e8eeff;
-    --border: rgba(15,15,15,0.1);
-    --serif: 'DM Serif Display', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-  section[id], div[id] { scroll-margin-top: 70px; }
-
-  body {
-    font-family: var(--sans);
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 17px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.25rem 2.5rem;
-    background: rgba(250,249,246,0.88);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-logo { font-family: var(--serif); font-size: 1.15rem; letter-spacing: -0.01em; }
-  .nav-links { display: flex; gap: 2rem; }
-  .nav-links a {
-    font-size: 0.875rem; font-weight: 400; color: var(--ink-soft);
-    text-decoration: none; letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--ink); }
-  .nav-cta {
-    font-size: 0.875rem; font-weight: 500;
-    color: var(--accent); text-decoration: none;
-    border: 1px solid currentColor;
-    padding: 0.45rem 1.1rem; border-radius: 2rem;
-    transition: background 0.2s, color 0.2s;
-  }
-  .nav-cta:hover { background: var(--accent); color: #fff; }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 8rem 2.5rem 5rem;
-    gap: 4rem;
-    max-width: 1200px; margin: 0 auto;
-  }
-  .hero-label {
-    display: inline-block;
-    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent);
-    margin-bottom: 1.5rem;
-  }
-  .hero h1 {
-    font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4rem);
-    line-height: 1.1; letter-spacing: -0.02em;
-    color: var(--ink); margin-bottom: 1.5rem;
-  }
-  .hero h1 em { font-style: italic; color: var(--accent); }
-  .hero-sub {
-    font-size: 1.1rem; font-weight: 300; color: var(--ink-soft);
-    max-width: 46ch; margin-bottom: 2.5rem; line-height: 1.7;
-  }
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-  .btn-primary {
-    background: var(--ink); color: var(--paper);
-    padding: 0.85rem 2rem; border-radius: 2rem;
-    font-size: 0.95rem; font-weight: 500; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-  .btn-secondary {
-    color: var(--ink); font-size: 0.95rem; font-weight: 400;
-    text-decoration: none; display: flex; align-items: center; gap: 0.4rem;
-    border-bottom: 1px solid var(--border); padding-bottom: 1px;
-    transition: color 0.2s, border-color 0.2s;
-  }
-  .btn-secondary:hover { color: var(--accent); border-color: var(--accent); }
-
-  .hero-visual {
-    display: flex; flex-direction: column; gap: 1rem;
-    animation: fadeUp 0.8s ease 0.2s both;
-  }
-  .stat-card {
-    background: #fff; border: 1px solid var(--border);
-    border-radius: 16px; padding: 1.5rem 1.75rem;
-  }
-  .stat-card .num {
-    font-family: var(--serif); font-size: 2rem;
-    color: var(--ink); letter-spacing: -0.02em; line-height: 1.15;
-  }
-  .stat-card .label { font-size: 0.875rem; color: var(--ink-soft); margin-top: 0.25rem; }
-  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .stat-card.accent { background: var(--accent); border-color: var(--accent); }
-  .stat-card.accent .num, .stat-card.accent .label { color: #fff; }
-  .stat-card.accent .label { color: rgba(255,255,255,0.75); }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* SECTION BASE */
-  section { padding: 6rem 2.5rem; }
-  .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-tag {
-    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
-  }
-  .section-heading {
-    font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem);
-    line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem;
-  }
-  .section-sub { font-size: 1.05rem; color: var(--ink-soft); max-width: 52ch; line-height: 1.7; }
-  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
-
-  /* TESTIMONIALS */
-  #testimonials { background: #fff; }
-  .testimonial-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3.5rem; max-width: 780px; }
-  .testimonial-card {
-    border: 1px solid var(--border); border-radius: 16px;
-    padding: 2rem 2.25rem; position: relative;
-  }
-  .testimonial-quote {
-    font-family: var(--serif); font-size: 4rem; line-height: 1;
-    color: var(--accent-light); position: absolute; top: 1rem; right: 1.75rem;
-  }
-  .testimonial-text {
-    font-size: 1rem; color: var(--ink); line-height: 1.8;
-    margin-bottom: 1.75rem; font-style: italic; max-width: 62ch;
-  }
-  .testimonial-author { display: flex; align-items: center; gap: 1rem; }
-  .testimonial-avatar {
-    width: 52px; height: 52px; border-radius: 50%;
-    overflow: hidden; flex-shrink: 0; border: 2px solid var(--border);
-  }
-  .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .testimonial-name { font-size: 0.95rem; font-weight: 500; color: var(--ink); }
-  .testimonial-role { font-size: 0.82rem; color: var(--ink-faint); margin-top: 0.15rem; }
-
-  /* WARUM ICH */
-  .why-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem;
-  }
-  .why-item {
-    padding: 1.75rem 1.5rem; border: 1px solid var(--border);
-    border-radius: 16px; background: #fff; transition: border-color 0.2s, transform 0.2s;
-  }
-  .why-item:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .why-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: var(--accent-light); display: flex; align-items: center;
-    justify-content: center; margin-bottom: 1.25rem;
-  }
-  .why-icon svg { width: 22px; height: 22px; stroke: var(--accent); }
-  .why-item h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
-  .why-item p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; }
-  @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 540px) { .why-grid { grid-template-columns: 1fr; } }
-
-  /* LEISTUNGEN */
-  #leistungen { background: #fff; }
-  .services-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    margin-top: 4rem; border: 1px solid var(--border);
-    border-radius: 16px; overflow: hidden;
-  }
-  .service-item {
-    padding: 2.25rem 2rem;
-    border-right: 1px solid var(--border);
-    transition: background 0.2s;
-  }
-  .service-item:last-child { border-right: none; }
-  .service-item:hover { background: var(--paper); }
-  .service-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: var(--accent-light); display: flex; align-items: center;
-    justify-content: center; margin-bottom: 1.25rem;
-  }
-  .service-icon svg { width: 22px; height: 22px; stroke: var(--accent); }
-  .service-item h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.6rem; }
-  .service-item p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.65; }
-
-  /* ÜBER MICH */
-  #ueber-inner {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 3.5rem; align-items: start;
-    max-width: 1100px; margin: 0 auto;
-  }
-  #ueber-inner .section-sub { max-width: 48ch; margin-bottom: 1.5rem; }
-  .cert-list { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 2rem; }
-  .cert-badge {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    background: var(--paper); border: 1px solid var(--border);
-    border-radius: 2rem; padding: 0.45rem 1rem;
-    font-size: 0.85rem; font-weight: 400; color: var(--ink-soft);
-    width: fit-content;
-  }
-  .cert-badge span { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; flex-shrink: 0; }
-  .about-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .about-stat { padding: 1.5rem; border: 1px solid var(--border); border-radius: 14px; }
-  .about-stat .big {
-    font-family: var(--serif); font-size: 2.8rem; letter-spacing: -0.03em; color: var(--ink);
-  }
-  .about-stat p { font-size: 0.875rem; color: var(--ink-soft); margin-top: 0.25rem; }
-
-  /* PROJEKTE */
-  #projekte { background: #fff; }
-  .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-  .project-card {
-    border: 1px solid var(--border); border-radius: 16px;
-    padding: 2rem; transition: border-color 0.2s, transform 0.2s;
-    cursor: default;
-  }
-  .project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .project-tag {
-    font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--accent); font-weight: 500; margin-bottom: 0.75rem;
-  }
-  .project-card h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 0.6rem; }
-  .project-card p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.65; }
-  .project-result {
-    display: inline-block; margin-top: 1rem;
-    font-size: 0.825rem; font-weight: 500;
-    background: var(--accent-light); color: var(--accent);
-    padding: 0.3rem 0.8rem; border-radius: 2rem;
-  }
-
-  /* KONTAKT */
-  #kontakt { background: var(--ink); color: #fff; }
-  #kontakt .section-tag { color: #7fa3ff; }
-  #kontakt .section-heading { color: #fff; }
-  #kontakt .section-sub { color: rgba(255,255,255,0.6); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 4rem; }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  label { font-size: 0.82rem; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; }
-  input, textarea {
-    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 10px; padding: 0.8rem 1rem; color: #fff;
-    font-family: var(--sans); font-size: 0.95rem;
-    transition: border-color 0.2s; outline: none;
-  }
-  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
-  input:focus, textarea:focus { border-color: #7fa3ff; }
-  textarea { resize: vertical; min-height: 130px; }
-  .btn-send {
-    background: var(--accent); color: #fff;
-    border: none; border-radius: 2rem;
-    padding: 0.9rem 2rem; font-family: var(--sans); font-size: 0.95rem;
-    font-weight: 500; cursor: pointer; width: fit-content;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-send:hover { background: #0f3de8; transform: translateY(-1px); }
-  .contact-info { display: flex; flex-direction: column; gap: 2rem; }
-  .contact-block h4 { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.4rem; }
-  .contact-block a { color: #fff; text-decoration: none; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 1px; transition: border-color 0.2s; }
-  .contact-block a:hover { border-color: #7fa3ff; }
-  .contact-block p { color: rgba(255,255,255,0.65); font-size: 0.95rem; }
-
-  /* FOOTER */
-  footer {
-    background: var(--ink); border-top: 1px solid rgba(255,255,255,0.07);
-    padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; align-items: center;
-  }
-  footer p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
-  footer a { color: rgba(255,255,255,0.3); text-decoration: none; font-size: 0.82rem; }
-  footer a:hover { color: rgba(255,255,255,0.6); }
-
-  /* SUCCESS MESSAGE */
-  .form-success {
-    display: none; background: rgba(26,79,255,0.12); border: 1px solid rgba(127,163,255,0.3);
-    border-radius: 12px; padding: 1.25rem 1.5rem; color: #7fa3ff;
-    font-size: 0.95rem; text-align: center;
-  }
-
-  /* ANIMATIONS */
-  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
-  .fade-in.visible { opacity: 1; transform: none; }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; gap: 0; }
-    .hero-visual { display: none; }
-    .services-grid { grid-template-columns: 1fr; border-radius: 12px; }
-    .service-item { border-right: none; border-bottom: 1px solid var(--border); padding: 1.75rem 1.5rem; }
-    .service-item:last-child { border-bottom: none; }
-    section { padding: 4rem 1.5rem; }
-    #ueber-section { overflow: hidden; }
-    #ueber-inner { grid-template-columns: 1fr; gap: 2rem; width: 100%; max-width: 100%; }
-    #ueber-inner > div { min-width: 0; max-width: 100%; overflow: hidden; }
-    #ueber-inner img { width: 100%; max-width: 100%; height: auto; }
-    .about-numbers { width: 100%; }
-    .about-stat { min-width: 0; word-break: break-word; }
-    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .projects-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
-    .about-numbers { grid-template-columns: 1fr 1fr; }
-  }
-
-  @media (max-width: 540px) {
-    body { overflow-x: hidden; }
-    .hero { padding: 6rem 1.25rem 3rem; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero-sub { font-size: 1rem; }
-    .hero-actions { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-    section { padding: 3rem 1.25rem; }
-    .section-heading { font-size: 1.75rem; }
-    .why-grid { grid-template-columns: 1fr; }
-    .about-numbers { grid-template-columns: 1fr 1fr; }
-    #ueber-inner img { max-width: 100%; border-radius: 12px; }
-    nav { padding: 1rem 1.25rem; }
-    .nav-cta { display: none; }
-    .projects-grid { grid-template-columns: 1fr; }
-    footer { padding: 1.25rem; }
-  }
-</style>
-
-<style>
-  /* CONSENT OVERLAY */
-  #consent-overlay {
-    position: fixed; inset: 0; z-index: 9999;
-    background: rgba(15,15,15,0.55);
-    backdrop-filter: blur(4px);
-    display: flex; align-items: center; justify-content: center;
-    padding: 1.5rem;
-    opacity: 0; animation: fadeOverlay 0.3s ease 0.1s forwards;
-  }
-  @keyframes fadeOverlay { to { opacity: 1; } }
-  #consent-box {
-    background: #fff; border-radius: 20px;
-    padding: 2.5rem; max-width: 480px; width: 100%;
-    box-shadow: 0 24px 80px rgba(15,15,15,0.18);
-    transform: translateY(16px); animation: slideBox 0.3s ease 0.1s forwards;
-  }
-  @keyframes slideBox { to { transform: translateY(0); } }
-  #consent-box .c-label {
-    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: #1a4fff; margin-bottom: 0.75rem;
-  }
-  #consent-box h2 {
-    font-family: 'DM Serif Display', Georgia, serif;
-    font-size: 1.5rem; line-height: 1.2; letter-spacing: -0.02em;
-    color: #0f0f0f; margin-bottom: 0.75rem;
-  }
-  #consent-box p {
-    font-size: 0.9rem; color: #5a5a5a; line-height: 1.65; margin-bottom: 1.5rem;
-  }
-  .c-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
-  .c-btn {
-    padding: 0.8rem 1rem; border-radius: 2rem; font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; font-weight: 500; cursor: pointer;
-    border: 1.5px solid #0f0f0f; transition: background 0.2s, color 0.2s;
-    text-align: center;
-  }
-  .c-btn-decline { background: #fff; color: #0f0f0f; }
-  .c-btn-decline:hover { background: #f0f0f0; }
-  .c-btn-accept { background: #0f0f0f; color: #fff; }
-  .c-btn-accept:hover { background: #1a4fff; border-color: #1a4fff; }
-  .c-customize {
-    background: none; border: none; font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem; color: #999; cursor: pointer; text-decoration: underline;
-    display: block; margin: 0 auto; padding: 0.25rem; transition: color 0.2s;
-  }
-  .c-customize:hover { color: #0f0f0f; }
-  #consent-detail { display: none; margin-top: 1.25rem; border-top: 1px solid #eee; padding-top: 1.25rem; }
-  #consent-detail.open { display: block; }
-  .c-service {
-    display: flex; align-items: flex-start; justify-content: space-between;
-    gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0;
-  }
-  .c-service:last-child { border-bottom: none; }
-  .c-service-info h4 { font-size: 0.9rem; font-weight: 500; color: #0f0f0f; margin-bottom: 0.2rem; }
-  .c-service-info p { font-size: 0.8rem; color: #5a5a5a; line-height: 1.5; margin: 0; }
-  .c-toggle { position: relative; flex-shrink: 0; }
-  .c-toggle input { opacity: 0; width: 0; height: 0; position: absolute; }
-  .c-toggle-track {
-    display: block; width: 40px; height: 22px; border-radius: 11px;
-    background: #ddd; cursor: pointer; transition: background 0.2s; position: relative;
-  }
-  .c-toggle input:checked + .c-toggle-track { background: #1a4fff; }
-  .c-toggle-track::after {
-    content: ''; position: absolute; top: 3px; left: 3px;
-    width: 16px; height: 16px; border-radius: 50%; background: #fff;
-    transition: transform 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  }
-  .c-toggle input:checked + .c-toggle-track::after { transform: translateX(18px); }
-  .c-save {
-    width: 100%; margin-top: 1rem; padding: 0.8rem;
-    background: #0f0f0f; color: #fff; border: none; border-radius: 2rem;
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
-    cursor: pointer; transition: background 0.2s;
-  }
-  .c-save:hover { background: #1a4fff; }
-</style>
-
-<div id="consent-overlay">
-  <div id="consent-box">
-    <p class="c-label">Datenschutz</p>
-    <h2>Darf ich Cookies setzen?</h2>
-    <p>Ich nutze Analyse-Tools um zu verstehen, wie diese Website genutzt wird – damit ich sie verbessern kann. Du entscheidest, was geladen wird.</p>
-    <div class="c-buttons">
-      <button class="c-btn c-btn-decline" onclick="consentDecline()">Ablehnen</button>
-      <button class="c-btn c-btn-accept" onclick="consentAccept()">Akzeptieren</button>
-    </div>
-    <button class="c-customize" onclick="toggleDetail()">Anpassen</button>
-    <div id="consent-detail">
-      <div class="c-service">
-        <div class="c-service-info">
-          <h4>Google Analytics (GA4)</h4>
-          <p>Anonyme Besucherstatistiken: Seitenaufrufe, Verweildauer, Herkunft. Keine personenbezogenen Daten.</p>
-        </div>
-        <label class="c-toggle">
-          <input type="checkbox" id="toggle-ga4" checked>
-          <span class="c-toggle-track"></span>
-        </label>
-      </div>
-      <div class="c-service">
-        <div class="c-service-info">
-          <h4>Google Tag Manager</h4>
-          <p>Verwaltet das Laden von Analyse-Skripten. Selbst kein Tracking, nur Steuerung.</p>
-        </div>
-        <label class="c-toggle">
-          <input type="checkbox" id="toggle-gtm" checked>
-          <span class="c-toggle-track"></span>
-        </label>
-      </div>
-      <button class="c-save" onclick="consentSave()">Auswahl speichern</button>
-    </div>
-  </div>
-</div>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
-  (function(w,d,s,l,i){
-    w[l]=w[l]||[];
-    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WZT8MMH3');
-
-  function getCookie(name) {
-    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    return match ? match[2] : null;
-  }
-  function setCookie(name, value, days) {
-    var d = new Date(); d.setTime(d.getTime() + days*24*60*60*1000);
-    document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
-  }
-  function pushConsent(ga4, gtm) {
-    gtag('consent', 'update', {
-      analytics_storage: ga4 ? 'granted' : 'denied',
-      ad_storage: gtm ? 'granted' : 'denied',
-      ad_user_data: gtm ? 'granted' : 'denied',
-      ad_personalization: gtm ? 'granted' : 'denied'
-    });
-    window.dataLayer.push({ event: 'consentUpdate', consentAnalytics: ga4, consentGTM: gtm });
-  }
-  function hideOverlay() {
-    var o = document.getElementById('consent-overlay');
-    o.style.opacity = '0'; o.style.transition = 'opacity 0.2s';
-    setTimeout(function(){ o.remove(); }, 200);
-  }
-  function consentAccept() { setCookie('consent_analytics','true',365); setCookie('consent_gtm','true',365); pushConsent(true,true); hideOverlay(); }
-  function consentDecline() { setCookie('consent_analytics','false',365); setCookie('consent_gtm','false',365); pushConsent(false,false); hideOverlay(); }
-  function consentSave() {
-    var gtm = document.getElementById('toggle-gtm').checked;
-    var ga4 = document.getElementById('toggle-ga4').checked;
-    setCookie('consent_analytics', ga4?'true':'false', 365);
-    setCookie('consent_gtm', gtm?'true':'false', 365);
-    pushConsent(ga4, gtm); hideOverlay();
-  }
-  function toggleDetail() { document.getElementById('consent-detail').classList.toggle('open'); }
-  window.addEventListener('DOMContentLoaded', function() {
-    var ac = getCookie('consent_analytics'), gc = getCookie('consent_gtm');
-    if (ac !== null) {
-      var o = document.getElementById('consent-overlay');
-      if (o) o.remove();
-      pushConsent(ac === 'true', gc === 'true');
-    }
-  });
-</script>
+<link rel="preload" href="/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/consent.js"></script>
+<script src="/assets/main.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-<nav>
-  <div class="nav-logo">Leon Krieger</div>
-  <div class="nav-links">
+<nav class="site-nav" aria-label="Hauptnavigation">
+  <a class="nav-logo" href="/">Leon Krieger</a>
+  <div class="nav-links" id="nav-links">
     <a href="#leistungen">Leistungen</a>
     <a href="#ueber-section">Über mich</a>
     <a href="#projekte">Projekte</a>
     <a href="#kontakt">Kontakt</a>
   </div>
-  <a href="#kontakt" class="nav-cta">Gespräch vereinbaren</a>
+  <div class="nav-right">
+    <a href="#kontakt" class="nav-cta">Gespräch vereinbaren</a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+  </div>
 </nav>
 
-<main>
+<main id="main">
 <div class="hero">
-  <div class="hero-content fade-in visible">
-    <span class="hero-label">Web Analytics &amp; Data Consultant</span>
-    <h1>Web Analytics & Tracking – <em>Daten</em>, die Entscheidungen treiben.</h1>
-    <p class="hero-sub">Hey, ich bin Leon – freiberuflicher Web Analytics Berater und Google Tag Manager Freelancer aus dem Rhein-Main-Gebiet. Ich helfe dir, dein Tracking sauber aufzusetzen, deine Daten zu verstehen und mit klaren Dashboards fundierte Entscheidungen zu treffen.</p>
+  <div class="hero-content">
+    <span class="hero-label">GA4 &amp; Google Tag Manager Freelancer · Rhein-Main</span>
+    <h1>Web Analytics &amp; Tracking – <em>Daten</em>, die Entscheidungen treiben.</h1>
+    <p class="hero-sub">Hey, ich bin Leon – freiberuflicher Web Analytics Berater aus dem Rhein-Main-Gebiet. Ich helfe dir, dein Tracking sauber und DSGVO-konform aufzusetzen, deine Daten zu verstehen und mit klaren Dashboards bessere Entscheidungen zu treffen.</p>
     <div class="hero-actions">
       <a href="#kontakt" class="btn-primary">Lass uns reden</a>
       <a href="#leistungen" class="btn-secondary">Was ich tue →</a>
     </div>
-    <div style="margin-top:1.5rem;">
-      <a href="https://www.linkedin.com/in/leon-krieger/" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--ink-soft);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#1a4fff'" onmouseout="this.style.color='var(--ink-soft)'">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn Profil ansehen
-      </a>
-    </div>
+    <a class="hero-linkedin" href="https://www.linkedin.com/in/leon-krieger/" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn-Profil ansehen
+    </a>
   </div>
-  <div class="hero-visual">
-    <div class="stat-card accent">
-      <div class="num">100 %</div>
-      <div class="label">Datenschutzkonforme Implementierungen</div>
-    </div>
-    <div class="stat-row">
-      <div class="stat-card">
-        <div class="num">GA4</div>
-        <div class="label">Ich weiß, was auf deiner Website passiert</div>
-      </div>
-      <div class="stat-card">
-        <div class="num">GTM</div>
-        <div class="label">Sauberes Tracking, von Anfang an</div>
-      </div>
-    </div>
-    <div class="stat-card">
-      <div class="num">Data Studio &amp; BigQuery</div>
-      <div class="label">Dashboards, die Entscheidungen erleichtern</div>
+  <div class="hero-visual" aria-label="Kundenstimme und Werkzeuge">
+    <figure class="hero-quote">
+      <blockquote>„Mit Leon haben wir einen Partner gefunden, der […] in kürzester Zeit ein passendes Setup erstellt hat.“</blockquote>
+      <figcaption>
+        <img src="/1000351347small.jpg" alt="" width="36" height="36" decoding="async">
+        <span><strong>Mario Müller</strong>Geschäftsführer · Social Matching Plattformen GmbH</span>
+      </figcaption>
+    </figure>
+    <div class="hero-tools">
+      <p>Womit ich arbeite</p>
+      <ul class="tool-list">
+        <li>Google Analytics 4</li>
+        <li>Google Tag Manager</li>
+        <li>Server-Side GTM</li>
+        <li>Consent Mode v2</li>
+        <li>Looker Studio</li>
+        <li>BigQuery</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -630,36 +152,36 @@
     <div class="fade-in">
       <p class="section-tag">Was ich tue</p>
       <h2 class="section-heading">Meine Leistungen</h2>
-      <p class="section-sub">Von der sauberen Datenbasis bis zum aussagekräftigen Report – als Web Analytics Freelancer begleite ich den gesamten Prozess: von der GA4-Implementierung über GTM-Setup bis zum fertigen Dashboard.</p>
+      <p class="section-sub">Von der sauberen Datenbasis bis zum aussagekräftigen Report – als Web Analytics Freelancer begleite ich den gesamten Prozess: von der GA4-Implementierung über das GTM-Setup bis zum fertigen Dashboard.</p>
     </div>
     <div class="services-grid fade-in">
       <div class="service-item">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <div class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
         </div>
         <h3>Web Analytics (GA4)</h3>
-        <p>GA4-Implementierung, Migration von Universal Analytics zu GA4, Event-Tracking, Conversion-Tracking und Custom Dimensions – damit deine Daten das messen, was zählt. Für E-Commerce, SaaS und Mittelstand.</p>
+        <p>GA4-Implementierung, Event- und Conversion-Tracking, Custom Dimensions und E-Commerce-Tracking – damit deine Daten das messen, was zählt. Für E-Commerce, SaaS und Mittelstand.</p>
       </div>
       <div class="service-item">
-        <div class="service-icon">
+        <div class="icon-box" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         </div>
         <h3>Tracking &amp; Tag Management</h3>
-        <p>Google Tag Manager Setup, GTM-Audit und serverseitiges Tracking (Server-Side GTM) – inkl. Cookie Consent Integration nach DSGVO. Für Unternehmen im Rhein-Main-Gebiet und remote.</p>
+        <p>Google Tag Manager Setup, GTM-Audits und serverseitiges Tracking (Server-Side GTM) – inklusive Consent Mode v2 und Cookie-Banner-Integration nach DSGVO. Für Unternehmen in Frankfurt, Mainz, Wiesbaden und remote.</p>
       </div>
       <div class="service-item">
-        <div class="service-icon">
+        <div class="icon-box" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3>BI &amp; Dashboards</h3>
-        <p>Google Data Studio Dashboards, BigQuery-Anbindung und automatisiertes Reporting – deine wichtigsten KPIs auf einen Blick, für dein Team und die Führungsebene.</p>
+        <p>Looker Studio Dashboards, BigQuery-Anbindung und automatisiertes Reporting – deine wichtigsten KPIs auf einen Blick, für dein Team und die Führungsebene.</p>
       </div>
       <div class="service-item">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <div class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
         </div>
         <h3>Conversion Tracking</h3>
-        <p>Ich richte Conversion Tracking für alle relevanten Plattformen ein – Google Ads Conversion Tracking, Meta Pixel, LinkedIn Insight Tag und mehr. Du siehst genau, welche Kanäle wirklich Ergebnisse liefern, und kannst dein Budget gezielt einsetzen.</p>
+        <p>Conversion Tracking für alle relevanten Plattformen – Google Ads, Meta, LinkedIn Insight Tag und mehr. Du siehst genau, welche Kanäle wirklich Ergebnisse liefern, und kannst dein Budget gezielt einsetzen.</p>
       </div>
     </div>
   </div>
@@ -677,22 +199,22 @@
     </div>
     <div class="why-grid fade-in">
       <div class="why-item">
-        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
         <h3>Saubere Datenbasis</h3>
         <p>Ich stelle sicher, dass deine Daten stimmen, bevor wir sie interpretieren. Kein Reporting auf wackeligen Zahlen.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
         <h3>Schnelle Umsetzung</h3>
         <p>Kein langes Briefing, kein Overhead. Projekte starten innerhalb weniger Tage – fokussiert und strukturiert.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3M9 7h1m-1 4h1m4-4h1m-1 4h1"/></svg></div>
-        <h3>Langfristige Qualität</h3>
-        <p>Ich baue Setups, die auch in zwei Jahren noch sauber laufen – wartbar, dokumentiert und skalierbar.</p>
+        <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></div>
+        <h3>Datenschutz von Anfang an</h3>
+        <p>Consent Mode, saubere Einwilligungen und datensparsame Setups gehören bei mir zum Standard – nicht zur Nacharbeit.</p>
       </div>
       <div class="why-item">
-        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+        <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
         <h3>Klare Kommunikation</h3>
         <p>Kein Tech-Jargon. Du verstehst immer, was ich tue und warum – und was die Daten für dein Business bedeuten.</p>
       </div>
@@ -702,27 +224,26 @@
 
 <hr class="divider">
 
-<!-- TESTIMONIALS -->
+<!-- KUNDENSTIMMEN -->
 <section id="testimonials">
-  <div class="section-inner">
+  <div class="section-inner testimonial-layout">
     <div class="fade-in">
       <p class="section-tag">Kundenstimmen</p>
       <h2 class="section-heading">Was Kunden sagen.</h2>
+      <p class="section-sub">Ehrliches Feedback aus der Zusammenarbeit.</p>
     </div>
-    <div class="testimonial-grid fade-in">
-      <div class="testimonial-card">
-        <div class="testimonial-quote">"</div>
-        <p class="testimonial-text">Als junges Start-up standen wir vor der Herausforderung, unser Tracking sauber aufzusetzen. Mit Leon haben wir einen Partner gefunden, der sich bei Google, Meta und LinkedIn bestens auskennt und in kürzester Zeit ein passendes Setup erstellt hat. Die Zusammenarbeit lief total unkompliziert – er nimmt alle inhaltlich mit und erklärt, was er tut. Unsere Bedarfe waren meist situativ und doch wiederkehrend, sodass wir froh sind, diesen wichtigen Bereich – auch um skalierfähig zu sein – in vertrauensvoller Expertise zu wissen.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">
-            <img src="1000351347small.jpg" alt="Mario Müller" width="52" height="52">
-          </div>
+    <div class="testimonial-list fade-in">
+      <figure class="testimonial-card">
+        <blockquote class="testimonial-text">Als junges Start-up standen wir vor der Herausforderung, unser Tracking sauber aufzusetzen. Mit Leon haben wir einen Partner gefunden, der sich bei Google, Meta und LinkedIn bestens auskennt und in kürzester Zeit ein passendes Setup erstellt hat. Die Zusammenarbeit lief total unkompliziert – er nimmt alle inhaltlich mit und erklärt, was er tut. Unsere Bedarfe waren meist situativ und doch wiederkehrend, sodass wir froh sind, diesen wichtigen Bereich – auch um skalierfähig zu sein – in vertrauensvoller Expertise zu wissen.</blockquote>
+        <figcaption class="testimonial-author">
+          <img class="testimonial-avatar" src="/1000351347small.jpg" alt="Mario Müller" width="52" height="52" loading="lazy" decoding="async">
           <div>
             <div class="testimonial-name">Mario Müller</div>
             <div class="testimonial-role">Geschäftsführer · Social Matching Plattformen GmbH</div>
           </div>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
+      <!-- Weitere Stimmen: einfach eine weitere <figure class="testimonial-card"> hier einfügen -->
     </div>
   </div>
 </section>
@@ -731,31 +252,29 @@
 
 <!-- ÜBER MICH -->
 <section id="ueber-section">
-  <div id="ueber-inner" class="fade-in">
+  <div class="about-inner fade-in">
     <div>
       <p class="section-tag">Über mich</p>
       <h2 class="section-heading">Analytisch denken. Klar kommunizieren.</h2>
-      <p class="section-sub">Ich bin Leon – freiberuflicher Web Analytics Consultant und GTM-Experte aus dem Rhein-Main-Gebiet. Mit mehrjähriger Erfahrung aus Agentur- und Unternehmensseite helfe ich kleinen und mittelständischen Unternehmen, datenbasierte Entscheidungen zur Normalität zu machen.</p>
-      <p class="section-sub" style="margin-top:1rem;">Meine Stärke liegt darin, technische Komplexität verständlich zu machen und GA4- und GTM-Setups zu bauen, die auch in zwei Jahren noch sauber laufen.</p>
-      <div class="cert-list">
-        <span class="cert-badge"><span></span>Google Analytics 4</span>
-        <span class="cert-badge"><span></span>Google Tag Manager</span>
-        <span class="cert-badge"><span></span>Data Studio (Google Data Studio)</span>
-        <span class="cert-badge"><span></span>BigQuery</span>
-      </div>
-      <div class="fade-in" style="margin-top:3rem;">
+      <p class="section-sub">Ich bin Leon – freiberuflicher Web Analytics Consultant und GTM-Experte aus dem Rhein-Main-Gebiet. Mit mehrjähriger Erfahrung auf Agentur- und Unternehmensseite helfe ich kleinen und mittelständischen Unternehmen, datenbasierte Entscheidungen zur Normalität zu machen.</p>
+      <p class="section-sub">Meine Stärke liegt darin, technische Komplexität verständlich zu machen und GA4- und GTM-Setups zu bauen, die auch in zwei Jahren noch sauber laufen – wartbar, dokumentiert und skalierbar.</p>
+      <ul class="skill-list" aria-label="Schwerpunkte">
+        <li>Google Analytics 4</li>
+        <li>Google Tag Manager</li>
+        <li>Server-Side GTM</li>
+        <li>Consent Mode v2</li>
+        <li>Looker Studio</li>
+        <li>BigQuery</li>
+      </ul>
+      <div class="about-cta">
         <a href="#kontakt" class="btn-primary">Lass uns zusammenarbeiten</a>
       </div>
     </div>
     <div>
-      <div style="margin-bottom:1.5rem;">
-        <img src="morefire-leon_krieger.jpg" alt="Leon Krieger – Web Analytics Berater aus dem Rhein-Main-Gebiet" width="422" height="544" style="width:100%;max-width:422px;height:auto;border-radius:16px;display:block;box-sizing:border-box;">
-      </div>
+      <img class="about-photo" src="/morefire-leon_krieger.jpg" alt="Leon Krieger, Web Analytics Berater aus dem Rhein-Main-Gebiet" width="422" height="544" loading="lazy" decoding="async">
       <div class="about-numbers">
-        <div class="about-stat"><div class="big">5+</div><p>Jahre Erfahrung im Bereich Analytics &amp; Tracking</p></div>
-        <div class="about-stat"><div class="big">30+</div><p>Projekte erfolgreich umgesetzt</p></div>
-        <div class="about-stat"><div class="big">100%</div><p>Fokus auf saubere, nachhaltige Implementierungen</p></div>
-        <div class="about-stat"><div class="big">DSGVO</div><p>Alle Setups datenschutzkonform und rechtssicher</p></div>
+        <div class="about-stat"><div class="big">5+</div><p>Jahre Erfahrung in Analytics &amp; Tracking</p></div>
+        <div class="about-stat"><div class="big">30+</div><p>erfolgreich umgesetzte Projekte</p></div>
       </div>
     </div>
   </div>
@@ -772,33 +291,33 @@
       <p class="section-sub">Einige anonymisierte Beispiele aus der Praxis.</p>
     </div>
     <div class="projects-grid fade-in">
-      <div class="project-card">
-        <p class="project-tag">E-Commerce · GA4 Migration</p>
+      <article class="project-card">
+        <p class="project-tag">E-Commerce · GA4-Migration</p>
         <h3>Vollständige GA4-Migration für einen Online-Shop</h3>
-        <p>Migration von Universal Analytics zu GA4 inkl. Enhanced Ecommerce, Custom Events und Conversion-Tracking. Vollständige Datenkontinuität trotz GA4-Umstellung sichergestellt.</p>
+        <p>Migration von Universal Analytics zu GA4 inkl. E-Commerce-Tracking, Custom Events und Conversion-Tracking. Vollständige Datenkontinuität während der Umstellung sichergestellt.</p>
         <span class="project-result">↑ 40 % bessere Conversion-Datenqualität</span>
-      </div>
-      <div class="project-card">
+      </article>
+      <article class="project-card">
         <p class="project-tag">SaaS · Serverseitiges Tracking</p>
         <h3>sGTM-Setup für ein B2B-SaaS-Unternehmen</h3>
-        <p>Einführung von Server-Side Tagging mit Google Cloud Run zur Überwindung von Adblocker-Limitierungen. DSGVO-konforme Architektur mit First-Party-Cookies.</p>
+        <p>Einführung von Server-Side Tagging mit Google Cloud Run: Daten laufen über eine eigene First-Party-Domain, sensible Parameter werden gefiltert, bevor sie an Drittanbieter gehen – bei voller Berücksichtigung der Einwilligungen.</p>
         <span class="project-result">↑ 25 % mehr erfasste Sessions</span>
-      </div>
-      <div class="project-card">
+      </article>
+      <article class="project-card">
         <p class="project-tag">Agentur · Reporting</p>
         <h3>Automatisiertes Reporting-Dashboard</h3>
-        <p>Aufbau eines zentralen Data Studio Dashboards, das Daten aus GA4, Google Ads und CRM zusammenführt – für wöchentliche Management-Reports auf Knopfdruck.</p>
+        <p>Aufbau eines zentralen Looker Studio Dashboards, das Daten aus GA4, Google Ads und CRM zusammenführt – für wöchentliche Management-Reports auf Knopfdruck.</p>
         <span class="project-result">3 h/Woche Reportingaufwand eingespart</span>
-      </div>
-      <div class="project-card">
+      </article>
+      <article class="project-card">
         <p class="project-tag">Retail · Audit</p>
         <h3>Tracking-Audit und -Bereinigung</h3>
-        <p>Vollständiger GTM-Audit eines gewachsenen Tag-Containers mit über 80 Tags. Bereinigung von Datenlecks, doppelten Events und nicht mehr genutzten Tags.</p>
+        <p>Vollständiger GTM-Audit eines gewachsenen Containers mit über 80 Tags. Bereinigung von Datenlecks, doppelten Events und nicht mehr genutzten Tags.</p>
         <span class="project-result">Datenqualität deutlich verbessert</span>
-      </div>
+      </article>
     </div>
-    <div class="fade-in" style="text-align:center; margin-top:3.5rem;">
-      <p style="font-size:1.05rem; color:var(--ink-soft); margin-bottom:1.25rem;">Ähnliches Projekt geplant? Ich freue mich auf deine Nachricht.</p>
+    <div class="projects-cta fade-in">
+      <p>Ähnliches Projekt geplant? Ich freue mich auf deine Nachricht.</p>
       <a href="#kontakt" class="btn-primary">Projekt besprechen</a>
     </div>
   </div>
@@ -817,44 +336,45 @@
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Dein Name" required>
+            <input type="text" id="name" name="name" placeholder="Dein Name" autocomplete="name" required>
           </div>
           <div class="form-group">
             <label for="company">Unternehmen</label>
-            <input type="text" id="company" name="company" placeholder="Optional">
+            <input type="text" id="company" name="company" placeholder="Optional" autocomplete="organization">
           </div>
         </div>
         <div class="form-group">
           <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+          <input type="email" id="email" name="email" placeholder="deine@email.de" autocomplete="email" required>
         </div>
         <div class="form-group">
           <label for="message">Dein Anliegen</label>
           <textarea id="message" name="message" placeholder="Kurze Beschreibung deines Projekts oder deiner Frage …" required></textarea>
         </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="_gotcha">Bitte leer lassen</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="form-note">Deine Angaben nutze ich nur, um deine Anfrage zu beantworten. Der Versand läuft über den Dienst Formspree – mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
         <button type="submit" class="btn-send">Nachricht senden →</button>
-        <div class="form-success" id="formSuccess">Danke! Ich melde mich bald bei dir.</div>
+        <div class="form-success" id="formSuccess" role="status">Danke! Ich melde mich bald bei dir.</div>
       </form>
       <div class="contact-info">
         <div class="contact-block">
-          <h4>E-Mail</h4>
+          <h3>E-Mail</h3>
           <a href="mailto:leon@leonkrieger.com">leon@leonkrieger.com</a>
         </div>
         <div class="contact-block">
-          <h4>Website</h4>
-          <a href="https://leonkrieger.com">leonkrieger.com</a>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/leon-krieger/" target="_blank" rel="noopener">linkedin.com/in/leon-krieger</a>
         </div>
         <div class="contact-block">
-          <h4>LinkedIn</h4>
-          <a href="https://www.linkedin.com/in/leon-krieger/" target="_blank">linkedin.com/in/leon-krieger</a>
-        </div>
-        <div class="contact-block">
-          <h4>Verfügbarkeit</h4>
+          <h3>Verfügbarkeit</h3>
           <p>Ich nehme aktuell neue Projekte an – Projektstart ab sofort möglich.</p>
         </div>
         <div class="contact-block">
-          <h4>Standort</h4>
-          <p>Rhein-Main-Gebiet · Remote &amp; vor Ort</p>
+          <h3>Standort</h3>
+          <p>Rhein-Main-Gebiet · Frankfurt, Mainz, Wiesbaden · Remote &amp; vor Ort</p>
         </div>
       </div>
     </div>
@@ -862,104 +382,14 @@
 </section>
 </main>
 
-<footer>
-  <p>© 2026 Leon Krieger · <a href="https://leonkrieger.com">leonkrieger.com</a></p>
-  <div style="display:flex;gap:1.5rem;">
-    <a href="#" onclick="openModal('impressum'); return false;">Impressum</a>
-    <a href="#" onclick="openModal('datenschutz'); return false;">Datenschutz</a>
+<footer class="site-footer">
+  <p>© 2026 Leon Krieger</p>
+  <div class="footer-links">
+    <a href="/impressum/">Impressum</a>
+    <a href="/datenschutz/">Datenschutz</a>
+    <button type="button" data-consent-open>Cookie-Einstellungen</button>
   </div>
 </footer>
-
-<script>
-  const faders = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  faders.forEach(f => observer.observe(f));
-
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.btn-send');
-    const success = document.getElementById('formSuccess');
-    btn.textContent = 'Wird gesendet …'; btn.disabled = true;
-    try {
-      const res = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
-      if (res.ok) { success.style.display = 'block'; this.reset(); btn.style.display = 'none'; }
-      else { btn.textContent = 'Fehler – bitte per E-Mail melden'; btn.disabled = false; }
-    } catch { btn.textContent = 'Fehler – bitte per E-Mail melden'; btn.disabled = false; }
-  });
-</script>
-
-<style>
-  .modal-overlay {
-    display: none; position: fixed; inset: 0; z-index: 9998;
-    background: rgba(15,15,15,0.6); backdrop-filter: blur(4px);
-    align-items: center; justify-content: center; padding: 1.5rem;
-  }
-  .modal-overlay.open { display: flex; }
-  .modal-box {
-    background: #fff; border-radius: 20px; padding: 2.5rem;
-    max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto;
-    box-shadow: 0 24px 80px rgba(15,15,15,0.2);
-  }
-  .modal-box h2 { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.6rem; letter-spacing: -0.02em; color: #0f0f0f; margin-bottom: 1.5rem; }
-  .modal-box h3 { font-size: 0.95rem; font-weight: 500; color: #0f0f0f; margin: 1.5rem 0 0.4rem; }
-  .modal-box p, .modal-box li { font-size: 0.9rem; color: #5a5a5a; line-height: 1.7; margin-bottom: 0.5rem; }
-  .modal-box ul { padding-left: 1.25rem; }
-  .modal-close {
-    display: block; margin-top: 2rem; width: 100%; padding: 0.8rem;
-    background: #0f0f0f; color: #fff; border: none; border-radius: 2rem;
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
-    cursor: pointer; transition: background 0.2s;
-  }
-  .modal-close:hover { background: #1a4fff; }
-</style>
-
-<div class="modal-overlay" id="modal-impressum" onclick="closeModalOutside(event, 'impressum')">
-  <div class="modal-box">
-    <h2>Impressum</h2>
-    <h3>Angaben gemäß § 5 TMG</h3>
-    <p>Leon Krieger<br>In der Eichenbach 3<br>55435 Gau-Algesheim</p>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
-    <h3>Hinweis</h3>
-    <p>Leon Krieger ist Kleinunternehmer im Sinne von § 19 UStG. Es wird daher keine Umsatzsteuer berechnet und ausgewiesen.</p>
-    <h3>Haftung für Inhalte</h3>
-    <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf dieser Website nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen, besteht nicht.</p>
-    <h3>Haftung für Links</h3>
-    <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
-    <button class="modal-close" onclick="closeModal('impressum')">Schließen</button>
-  </div>
-</div>
-
-<div class="modal-overlay" id="modal-datenschutz" onclick="closeModalOutside(event, 'datenschutz')">
-  <div class="modal-box">
-    <h2>Datenschutzerklärung</h2>
-    <h3>Verantwortlicher</h3>
-    <p>Leon Krieger<br>In der Eichenbach 3<br>55435 Gau-Algesheim<br>E-Mail: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
-    <h3>Erhebung und Verarbeitung personenbezogener Daten</h3>
-    <p>Diese Website erhebt nur dann personenbezogene Daten, wenn du aktiv Informationen übermittelst (z. B. über das Kontaktformular) oder der Nutzung von Analyse-Diensten zustimmst.</p>
-    <h3>Kontaktformular</h3>
-    <p>Wenn du das Kontaktformular nutzt, werden die eingegebenen Daten (Name, E-Mail, Nachricht) zur Bearbeitung deiner Anfrage verarbeitet und per Formspree (Formspree, Inc., USA) übermittelt. Die Daten werden nicht für andere Zwecke genutzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</p>
-    <h3>Google Tag Manager</h3>
-    <p>Diese Website nutzt den Google Tag Manager (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Der Tag Manager selbst setzt keine Cookies und verarbeitet keine personenbezogenen Daten. Er dient ausschließlich der Verwaltung von Analyse-Skripten und wird nur bei deiner Einwilligung aktiviert.</p>
-    <h3>Google Analytics (GA4)</h3>
-    <p>Mit deiner Einwilligung wird Google Analytics 4 (Google Ireland Limited) eingesetzt, um die Nutzung dieser Website statistisch auszuwerten. Dabei werden Daten wie Seitenaufrufe, Verweildauer und ungefähre Herkunft anonymisiert erfasst. Die Daten werden auf Servern von Google verarbeitet, ggf. auch in den USA. Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Du kannst deine Einwilligung jederzeit widerrufen.</p>
-    <h3>Cookies</h3>
-    <p>Diese Website verwendet ein Cookie zur Speicherung deiner Datenschutzentscheidung (Name: <code>consent_analytics</code>). Dieses Cookie ist technisch notwendig, um deine Einwilligung zu merken, und läuft nach 365 Tagen ab.</p>
-    <h3>Deine Rechte</h3>
-    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten sowie das Recht auf Datenübertragbarkeit. Wende dich dafür jederzeit an: <a href="mailto:leon@leonkrieger.com" style="color:#1a4fff">leon@leonkrieger.com</a></p>
-    <h3>Beschwerderecht</h3>
-    <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für Datenschutz und Informationsfreiheit Rheinland-Pfalz.</p>
-    <button class="modal-close" onclick="closeModal('datenschutz')">Schließen</button>
-  </div>
-</div>
-
-<script>
-  function openModal(name) { document.getElementById('modal-' + name).classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeModal(name) { document.getElementById('modal-' + name).classList.remove('open'); document.body.style.overflow = ''; }
-  function closeModalOutside(event, name) { if (event.target === document.getElementById('modal-' + name)) { closeModal(name); } }
-</script>
 
 </body>
 </html>
